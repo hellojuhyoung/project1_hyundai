@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="page1.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="section1">
+      <nav class="navbar">
+        <ul>
+          <div class="logoWrap">
+            <li class="hyundaiLogo">
+              <a href="#"
+                ><img
+                  src="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/new/common/logo-wh.png
+                    "
+                  alt="logo"
+              /></a>
+            </li>
+          </div>
+          <div class="menuWrap">
+            <li class="brandJournal"><a href="#">Brand journal</a></li>
+            <li class="vehicles"><a href="#">Vehicles</a></li>
+            <li class="company"><a href="#">Company</a></li>
+            <li class="newsroom"><a href="#">Newsroom</a></li>
+          </div>
+          <div class="optionsWrap">
+            <li class="globe">
+              <a href="#"><img src="images/globe.png" alt="globe" /></a>
+            </li>
+            <li class="language"><a href="#">KR</a></li>
+            <li class="magnifyingGlass">
+              <a href="#"
+                ><img src="images/magnifyingGlass.png" alt="magnifyingGlass"
+              /></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <div class="videoContainer">
+          <video
+            id="video1"
+            src="images/videos/hyundai_greetings(edited).mp4"
+            autoplay
+            muted
+          ></video>
+          <video
+            id="video2"
+            src="images/videos/hyundai_ioniq_lineup(edited).mp4"
+            autoplay
+            muted
+            style="display: none"
+          ></video>
+          <video
+            id="video3"
+            src="images/videos/hyundai_ioniq9(edited).mp4"
+            autoplay
+            muted
+            style="display: none"
+          ></video>
+        </div>
+        <div class="controls">
+          <button id="prevBtn" onclick="prevVideo()">&#10094;</button>
+          <button id="nextBtn" onclick="nextVideo()">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="section2">
+      <h2>Section 2</h2>
+      <p>Content for Section 2</p>
+    </section>
+
+    <section id="section3">
+      <h2>Section 3</h2>
+      <p>Content for Section 3</p>
+    </section>
+
+    <section id="section4">
+      <h2>Section 4</h2>
+      <p>Content for Section 4</p>
+    </section>
+  </body>
+  <script src="page1.js"></script>
+</html>

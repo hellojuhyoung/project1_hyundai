@@ -1,0 +1,82 @@
+body {
+  margin: 0; /* Remove default browser margins */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 81px;
+  min-height: 80px;
+  background-color: none; /* Initial background color */
+  z-index: 1; /* Ensure it stays on top */
+  transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+  display: flex;
+  padding: 10px 20px;
+}
+.scroll-up {
+  background-color: white; /* Change background color on scroll */
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.navbar li {
+  margin: 0 10px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+.logoWrap {
+  display: flex;
+  justify-content: flex-start;
+}
+.menuWrap {
+  position: absolute;
+  left: 30%;
+  display: flex;
+  font-size: 18px;
+}
+.optionsWrap {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  font-size: 12px;
+}
+.hyundaiLogo img {
+  width: 155px;
+  height: 22px;
+}
+.language {
+  display: inline-block;
+  line-height: 24px;
+}
+.globe img,
+.magnifyingGlass img {
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+.videoContainer {
+  position: relative;
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: 100vh; /* Set height to 100% of viewport height */
+  overflow: hidden; /* Hide content that overflows the container */
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
