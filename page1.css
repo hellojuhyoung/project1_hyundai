@@ -1,5 +1,37 @@
+/* @media (min-width: 1440px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+} */
 body {
   margin: 0; /* Remove default browser margins */
+}
+/* page to the top button */
+#scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: beige;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+/* #scrollToTopButton.top {
+  bottom: auto; 
+  top: 20px;
+} */
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .navbar {
   position: fixed;
@@ -12,17 +44,42 @@ body {
   z-index: 1; /* Ensure it stays on top */
   transition: background-color 0.3s ease-in-out; /* Smooth color transition */
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 10px 20px;
 }
-.scroll-up {
-  background-color: white; /* Change background color on scroll */
+.scrolled {
+  background-color: white;
 }
-.navbar ul {
+.scrolled .logoWrap {
+  filter: invert(1);
+}
+.scrolled .menuWrap a {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap .language {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+/* scrolled navbar hovered */
+.scrolled .menuWrap a:hover {
+  opacity: 1;
+}
+.scrolled .optionsWrap .language:hover {
+  opacity: 1.5;
+}
+.scrolled .optionsWrap img:hover {
+  opacity: 1.5;
+}
+.navBarContainer {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
 }
 .navbar li {
   margin: 0 10px;
@@ -34,21 +91,25 @@ body {
   font-weight: bolder;
 }
 .logoWrap {
+  position: absolute;
+  left: 50px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .menuWrap {
-  position: absolute;
-  left: 30%;
   display: flex;
+  justify-content: space-between;
   font-size: 18px;
+}
+.menuWarp li {
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
 }
 .optionsWrap {
   position: absolute;
-  right: 0;
+  right: 50px;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 100px;
   font-size: 12px;
 }
 .hyundaiLogo img {
@@ -65,12 +126,13 @@ body {
   width: 24px;
   height: 24px;
   color: white;
+  opacity: 1.5;
 }
 .videoContainer {
   position: relative;
-  width: 100vw; /* Set width to 100% of viewport width */
-  height: 100vh; /* Set height to 100% of viewport height */
-  overflow: hidden; /* Hide content that overflows the container */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 video {
   position: absolute;
@@ -79,4 +141,799 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.controls button {
+  color: white;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 60px;
+  cursor: pointer;
+  opacity: 0.7;
+  font-weight: lighter;
+  line-height: 0.1;
+}
+.textOverlay {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: left;
+  font-weight: bolder;
+}
+.video1Line1 {
+  font-size: 14px;
+}
+.video1Line2 {
+  font-size: 48px;
+}
+.video2Line1 {
+  font-size: 14px;
+}
+.video2Line2 {
+  font-size: 48px;
+}
+.video3Line1 {
+  font-size: 14px;
+}
+.video3Line2 {
+  font-size: 48px;
+}
+/* section2 */
+.section2Container {
+  display: flex;
+  height: 100vh;
+}
+.section2ImageContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.section2Left {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+.section2LeftTop {
+  flex: 5;
+  display: flex;
+  position: relative;
+}
+.section2LeftTop img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section2LeftTopTextOverlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section2LeftTopTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section2LeftTopTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section2LeftTopTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section2LeftTop:hover .section2LeftTopTextOverlay {
+  opacity: 1;
+}
+.section2LeftTopTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section2LeftTop:hover .section2LeftTopTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section2LeftTop:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section2LeftBottom {
+  display: flex;
+  flex: 5;
+}
+.section2LeftBottomLeft {
+  flex: 5;
+  display: flex;
+  position: relative;
+}
+.section2LeftBottomLeft img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section2LeftBottomLeftTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section2LeftBottomLeftTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section2LeftBottomLeftTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section2LeftBottomLeftTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section2LeftBottomLeft:hover .section2LeftBottomLeftTextOverlay {
+  opacity: 1;
+  transform: translateY(-120px);
+}
+.section2LeftBottomLeftTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section2LeftBottomLeft:hover .section2LeftBottomLeftTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section2LeftBottomLeft:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section2LeftBottomRight {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2LeftBottomRightText {
+  background-color: white;
+  color: rgba(0, 44, 95, 1);
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section2LeftBottomRight:hover .section2LeftBottomRightText {
+  background-color: rgba(0, 44, 95, 1);
+  color: white;
+}
+.section2LeftBottomRight:hover {
+  background-color: rgba(0, 44, 95, 1);
+}
+.section2Right {
+  flex: 3;
+  display: flex;
+  position: relative;
+}
+.section2Right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section2RightTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section2RightTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section2RightTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section2RightTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section2Right:hover .section2RightTextOverlay {
+  opacity: 1;
+  transform: translateY(-140px);
+}
+.section2RightTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section2Right:hover .section2RightTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section2Right:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+/* section3 */
+.section3Container {
+  display: flex;
+  height: 100vh;
+}
+.section3ImageContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.section3Left {
+  display: flex;
+  flex: 3.5;
+  background-color: black;
+  position: relative;
+}
+.section3Left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.section3LeftTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section3LeftTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section3LeftTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section3LeftTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section3Left:hover .section3LeftTextOverlay {
+  opacity: 1;
+  transform: translateY(-140px);
+}
+.section3LeftTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section3Left:hover .section3LeftTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section3Left:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section3Right {
+  display: flex;
+  flex-direction: column;
+  flex: 6.5;
+}
+.section3RightTop {
+  display: flex;
+  flex: 5;
+}
+.section3RightBottom {
+  display: flex;
+  flex: 5;
+  position: relative;
+}
+.section3RightTopLeft {
+  display: flex;
+  flex: 5;
+  position: relative;
+}
+.section3RightTopLeft img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section3RightTopLeftTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section3RightTopLeftTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section3RightTopLeftTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section3RightTopLeftTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section3RightTopLeft:hover .section3RightTopLeftTextOverlay {
+  opacity: 1;
+  transform: translateY(-120px);
+}
+.section3RightTopLeftTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section3RightTopLeft:hover .section3RightTopLeftTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section3RightTopLeft:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section3RightTopRight {
+  display: flex;
+  flex: 4.3;
+  justify-content: center;
+  align-items: center;
+}
+.section3RightTopRightText {
+  background-color: white;
+  color: rgba(0, 44, 95, 1);
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section3RightTopRight:hover .section3RightTopRightText {
+  background-color: rgba(0, 44, 95, 1);
+  color: white;
+}
+.section3RightTopRight:hover {
+  background-color: rgba(0, 44, 95, 1);
+}
+.section3RightBottom img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section3RightBottomTextOverlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section3RightBottomTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section3RightBottomTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section3RightBottomTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section3RightBottom:hover .section3RightBottomTextOverlay {
+  opacity: 1;
+}
+.section3RightBottomTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section3RightBottom:hover .section3RightBottomTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section3RightBottom:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+/* section4 */
+.section4Container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.section4ImageContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.section4Top {
+  display: flex;
+  flex: 5;
+  flex-direction: row;
+}
+.section4TopLeft {
+  display: flex;
+  flex: 3.5;
+  position: relative;
+}
+.section4TopLeft img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section4TopLeftTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section4TopLeftTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section4TopLeftTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section4TopLeftTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section4TopLeft:hover .section4TopLeftTextOverlay {
+  opacity: 1;
+  transform: translateY(-120px);
+}
+.section4TopLeftTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section4TopLeft:hover .section4TopLeftTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section4TopLeft:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section4TopMiddle {
+  display: flex;
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+}
+.section4TopMiddleText {
+  background-color: white;
+  color: rgba(0, 44, 95, 1);
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section4TopMiddle:hover .section4TopMiddleText {
+  background-color: rgba(0, 44, 95, 1);
+  color: white;
+}
+.section4TopMiddle:hover {
+  background-color: rgba(0, 44, 95, 1);
+}
+.section4TopRight {
+  display: flex;
+  flex: 3.5;
+  position: relative;
+}
+.section4TopRight img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.section4TopRightTextOverlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 1; /* Initial opacity for the overlay text */
+  transition: all 0.3s ease; /* Add transition effect */
+}
+.section4TopRightTextOverlayText1 {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+.section4TopRightTextOverlayText2 {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.section4TopRightTextOverlay.hover {
+  opacity: 1; /* Hide the overlay text on hover */
+  transform: translateY(-20px); /* Shift the text upwards */
+}
+.section4TopRight:hover .section4TopRightTextOverlay {
+  opacity: 1;
+  transform: translateY(-140px);
+}
+.section4TopRightTextDescription {
+  opacity: 0; /* Initially hide the description text */
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  line-height: 1.5;
+  padding: 10px;
+}
+.section4TopRight:hover .section4TopRightTextDescription {
+  opacity: 1; /* Show the description text on hover */
+}
+.section4TopRight:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 44, 95, 1); /* Adjust opacity as needed */
+  opacity: 0.7;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+.section4Bottom {
+  display: flex;
+  flex: 5;
+  background-color: black;
+}
+.section4ListContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  padding: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+.section4ListContainer li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
+}
+.section4ListContainer ul li {
+  display: flex;
+  margin: 10px 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section4ListContainer ul li:first-child {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below the header */
+  color: white;
+}
+.section4ListContainer ul li:not(:first-child) {
+  font-size: 0.8em; /* Reduce font size of list items */
+  font-weight: 100; /* Make list items thinner */
+  font-family: "Lato", sans-serif;
+  color: #cfc8c2;
+}
+.section4ListContainer ul li:not(:first-child):hover {
+  color: white;
+  cursor: pointer;
+}
+.section4ListContainer ul:nth-child(4) li:nth-child(2):hover {
+  color: #cfc8c2;
+  cursor: default;
+}
+.section4Openinnew {
+  width: 1em;
+  height: 1em;
+  margin-left: 5px;
+}
+.socialMedia img {
+  margin-right: 15px;
+  opacity: 0.7;
+}
+.socialMedia img:hover {
+  color: white;
+  opacity: 1.2;
+  cursor: pointer;
+}
+.copyrights {
+  color: #cfc8c2;
+  background: black;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+.copyrights img {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
 }

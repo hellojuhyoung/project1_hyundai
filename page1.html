@@ -1,89 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <link rel="stylesheet" href="page1.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-    <section id="section1">
-      <nav class="navbar">
-        <ul>
-          <div class="logoWrap">
-            <li class="hyundaiLogo">
-              <a href="#"
-                ><img
-                  src="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/new/common/logo-wh.png
-                    "
-                  alt="logo"
-              /></a>
-            </li>
+    <div class="container">
+      <button id="scrollToTopButton">↑</button>
+      <section id="section1">
+        <nav class="navbar">
+          <div class="navBarContainer">
+            <div class="logoWrap">
+              <li class="hyundaiLogo">
+                <a href="#"
+                  ><img
+                    src="https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/new/common/logo-wh.png
+                                "
+                    alt="logo"
+                /></a>
+              </li>
+            </div>
+            <div class="menuWrap">
+              <li class="brandJournal"><a href="#">Brand journal</a></li>
+              <li class="vehicles"><a href="#">Vehicles</a></li>
+              <li class="company"><a href="#">Company</a></li>
+              <li class="newsroom"><a href="#">Newsroom</a></li>
+            </div>
+            <div class="optionsWrap">
+              <li class="globe">
+                <a href="#"><img src="images/globe.png" alt="globe" /></a>
+              </li>
+              <li class="language"><a href="#">KR</a></li>
+              <li class="magnifyingGlass">
+                <a href="#"
+                  ><img src="images/magnifyingGlass.png" alt="magnifyingGlass"
+                /></a>
+              </li>
+            </div>
           </div>
-          <div class="menuWrap">
-            <li class="brandJournal"><a href="#">Brand journal</a></li>
-            <li class="vehicles"><a href="#">Vehicles</a></li>
-            <li class="company"><a href="#">Company</a></li>
-            <li class="newsroom"><a href="#">Newsroom</a></li>
-          </div>
-          <div class="optionsWrap">
-            <li class="globe">
-              <a href="#"><img src="images/globe.png" alt="globe" /></a>
-            </li>
-            <li class="language"><a href="#">KR</a></li>
-            <li class="magnifyingGlass">
-              <a href="#"
-                ><img src="images/magnifyingGlass.png" alt="magnifyingGlass"
-              /></a>
-            </li>
-          </div>
-        </ul>
-      </nav>
+        </nav>
 
-      <div class="content">
-        <div class="videoContainer">
-          <video
-            id="video1"
-            src="images/videos/hyundai_greetings(edited).mp4"
-            autoplay
-            muted
-          ></video>
-          <video
-            id="video2"
-            src="images/videos/hyundai_ioniq_lineup(edited).mp4"
-            autoplay
-            muted
-            style="display: none"
-          ></video>
-          <video
-            id="video3"
-            src="images/videos/hyundai_ioniq9(edited).mp4"
-            autoplay
-            muted
-            style="display: none"
-          ></video>
+        <div class="content">
+          <div class="videoContainer">
+            <video
+              id="video1"
+              src="images/videos/hyundai_greetings(edited).mp4"
+              autoplay
+              muted
+            ></video>
+            <div class="textOverlay">
+              <div class="video1Line1">Season's Greeting Card</div>
+              <div class="video1Line2">Send wishes for New Year</div>
+            </div>
+            <video
+              id="video2"
+              src="images/videos/hyundai_ioniq_lineup(edited).mp4"
+              autoplay
+              muted
+              style="display: none"
+            ></video>
+            <div class="textOverlay">
+              <div class="video2Line1">IONIQ lineup</div>
+              <div class="video2Line2">IONIQ, the powerhouse of innovation</div>
+            </div>
+            <video
+              id="video3"
+              src="images/videos/hyundai_ioniq9(edited).mp4"
+              autoplay
+              muted
+              style="display: none"
+            ></video>
+            <div class="textOverlay">
+              <div class="video3Line1">IONIQ lineup</div>
+              <div class="video3Line2">
+                Built to belong: IONIQ9 invites you to a space for you and your
+                people
+              </div>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="prevBtn" onclick="prevVideo()">&#10094;</button>
+            <button id="nextBtn" onclick="nextVideo()">&#10095;</button>
+          </div>
         </div>
-        <div class="controls">
-          <button id="prevBtn" onclick="prevVideo()">&#10094;</button>
-          <button id="nextBtn" onclick="nextVideo()">&#10095;</button>
+      </section>
+
+      <section id="section2">
+        <div class="section2Container">
+          <div class="section2Left">
+            <div class="section2LeftTop">
+              <div class="section2ImageContainer">
+                <img
+                  src="images/section2_images/section2LeftTop.jpg"
+                  alt="section2LeftTop"
+                />
+                <div class="section2LeftTopTextOverlay">
+                  <div class="section2LeftTopTextOverlayText1">
+                    IONIQ lineup
+                  </div>
+                  <div class="section2LeftTopTextOverlayText2">
+                    IONIQ 9 premieres at Goldstein <br />
+                    House is Los Angeles
+                  </div>
+                </div>
+                <div class="section2LeftTopTextDescription">
+                  <p>
+                    The IONIQ 9 World Primere took place in LA, where guests
+                    <br />
+                    got to experience the debut of the first three-row, all-<br />
+                    electric SUV in the IONIQ lineup.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section2LeftBottom">
+              <div class="section2LeftBottomLeft">
+                <div class="section2ImageContainer">
+                  <img
+                    src="images/section2_images/section2LeftBottomLeft.jpg"
+                    alt="section2LeftBottomLeft"
+                  />
+                  <div class="section2LeftBottomLeftTextOverlay">
+                    <div class="section2LeftBottomLeftTextOverlayText1">
+                      Future mobility services
+                    </div>
+                    <div class="section2LeftBottomLeftTextOverlayText2">
+                      Clearly commited to hydrogen
+                    </div>
+                  </div>
+                  <div class="section2LeftBottomLeftTextDescription">
+                    <p>
+                      Hyundai has taken great steps towards unlocking
+                      <br />hydrogen's potential, as seen in its latest hydrogen
+                      <br />
+                      fuel cell models.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="section2LeftBottomRight">
+                <div class="section2LeftBottomRightText">#IONIQ 9</div>
+              </div>
+            </div>
+          </div>
+          <div class="section2Right">
+            <div class="section2ImageContainer">
+              <img
+                src="images/section2_images/section2Right.jpg"
+                alt="section2Right"
+              />
+              <div class="section2RightTextOverlay">
+                <div class="section2RightTextOverlayText1">
+                  Carbon neutrality vision
+                </div>
+                <div class="section2RightTextOverlayText2">
+                  In a class of its own: <br />
+                  The Hyundai Future Mobility School
+                </div>
+              </div>
+              <div class="section2RightTextDescription">
+                <p>
+                  The Hyundai Future Mobility School invites <br />students to
+                  explore the fascinating world of <br />mobility technologies
+                  through exciting, intereative <br />
+                  courses.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="section2">
-      <h2>Section 2</h2>
-      <p>Content for Section 2</p>
-    </section>
+      <section id="section3">
+        <div class="section3Container">
+          <div class="section3Left">
+            <div class="section3ImageContainer">
+              <img
+                src="images/section3_images/section3Left.jpg"
+                alt="section3Left"
+              />
+              <div class="section3LeftTextOverlay">
+                <div class="section3LeftTextOverlayText1">IONIQ lineup</div>
+                <div class="section3LeftTextOverlayText2">
+                  Hyundai offers a fascinating glimpse<br />
+                  of the new IONIQ 9
+                </div>
+              </div>
+              <div class="section3LeftTextDescription">
+                <p>
+                  Hyundai offers a fascinating sneak peek at the all-<br />
+                  electric IONIQ 9, which is sure to set new standards<br />
+                  in the SUV segment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="section3Right">
+            <div class="section3RightTop">
+              <div class="section3RightTopLeft">
+                <div class="section3ImageContainer">
+                  <img
+                    src="images/section3_images/section3RightTopLeft.jpg"
+                    alt="section3RightTopLeft"
+                  />
+                  <div class="section3RightTopLeftTextOverlay">
+                    <div class="section3RightTopLeftTextOverlayText1">
+                      Entertainment
+                    </div>
+                    <div class="section3RightTopLeftTextOverlayText2">
+                      Hyundai raises the content marketing <br />bar with its
+                      first short drama
+                    </div>
+                  </div>
+                  <div class="section3RightTopLeftTextDescription">
+                    <p>
+                      With its film 'Amazon Bullseye' and the short drama <br />
+                      'Arrow of Cupid', Hyundai is taking content <br />
+                      marketing to new entertaining levels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="section3RightTopRight">
+                <div class="section3RightTopRightText">#Newsroom</div>
+              </div>
+            </div>
+            <div class="section3RightBottom">
+              <div class="section3ImageContainer">
+                <img
+                  src="images/section3_images/section3RightBottom.jpg"
+                  alt="section3RightBottom"
+                />
+                <div class="section3RightBottomTextOverlay">
+                  <div class="section3RightBottomTextOverlayText1">
+                    Partnership
+                  </div>
+                  <div class="section3RightBottomTextOverlayText2">
+                    ZERO1NE Playground sets <br />disruptive innovation free
+                  </div>
+                </div>
+                <div class="section3RightBottomTextDescription">
+                  <p>
+                    ZERO1NE Playground is a unique open innovation platform
+                    <br />
+                    where creators can bring their visions to life and form
+                    <br />
+                    dynamic partnerships with HMG.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="section3">
-      <h2>Section 3</h2>
-      <p>Content for Section 3</p>
-    </section>
-
-    <section id="section4">
-      <h2>Section 4</h2>
-      <p>Content for Section 4</p>
-    </section>
+      <section id="section4">
+        <div class="section4Container">
+          <div class="section4Top">
+            <div class="section4TopLeft">
+              <div class="section4ImageContainer">
+                <img
+                  src="images/section4_images/section4TopLeft.jpg"
+                  alt="section4TopLeft"
+                />
+                <div class="section4TopLeftTextOverlay">
+                  <div class="section4TopLeftTextOverlayText1">
+                    Green project
+                  </div>
+                  <div class="section4TopLeftTextOverlayText2">
+                    Cities in Motion #1 <br />
+                    Discovering London's green oases
+                  </div>
+                </div>
+                <div class="section4TopLeftTextDescription">
+                  <p>
+                    In our five-part sustainable cities series, <br />
+                    broadcaster James Stewart dicovers London's <br />
+                    green oases and what makes it a national park city.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="section4TopMiddle">
+              <div class="section4TopMiddleText">#Concept car</div>
+            </div>
+            <div class="section4TopRight">
+              <div class="section4ImageContainer">
+                <img
+                  src="images/section4_images/section4TopRight.jpg"
+                  alt="section4TopRight"
+                />
+                <div class="section4TopRightTextOverlay">
+                  <div class="section4TopRightTextOverlayText1">
+                    Green project
+                  </div>
+                  <div class="section4TopRightTextOverlayText2">
+                    Cities in Motion #2 <br />
+                    Frankfurt - the sustainable superstar
+                  </div>
+                </div>
+                <div class="section4TopRightTextDescription">
+                  <p>
+                    In our five-part sustainable cities series, <br />
+                    broadcaster James Stewart sees why Frankfurt is <br />
+                    banking on renewable energy for more green urban <br />
+                    development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section4Bottom">
+            <div class="section4ListContainer">
+              <ul>
+                <li><strong>Contact & legal</strong></li>
+                <li>Legal</li>
+                <li>Private policy</li>
+                <li>Cookies policy</li>
+                <li>Do not sell my information</li>
+                <li>Sitemap</li>
+                <div class="copyrights">
+                  <img
+                    src="images/section4_images/copyright.png"
+                    alt="copyRight"
+                    class=""
+                  />2025 Hyundai Motor Company
+                </div>
+              </ul>
+              <ul>
+                <li><strong>Corporate</strong></li>
+                <li>History</li>
+                <li>Awards</li>
+                <li>Vehicle history</li>
+                <li>Networks</li>
+                <li>Affliates</li>
+                <li>
+                  Supplier
+                  <img
+                    src="images/section4_images/open_in_new.png"
+                    alt="open_in_new"
+                    class="section4Openinnew"
+                  />
+                </li>
+              </ul>
+              <ul>
+                <li><strong>Hyundai experiences</strong></li>
+                <li>
+                  N
+                  <img
+                    src="images/section4_images/open_in_new.png"
+                    alt="open_in_new"
+                    class="section4Openinnew"
+                  />
+                </li>
+                <li>
+                  Hyundai Motorstudio
+                  <img
+                    src="images/section4_images/open_in_new.png"
+                    alt="open_in_new"
+                    class="section4Openinnew"
+                  />
+                </li>
+                <li>
+                  Hyundai Collection
+                  <img
+                    src="images/section4_images/open_in_new.png"
+                    alt="open_in_new"
+                    class="section4Openinnew"
+                  />
+                </li>
+                <li>
+                  Hyundai Artlab
+                  <img
+                    src="images/section4_images/open_in_new.png"
+                    alt="open_in_new"
+                    class="section4Openinnew"
+                  />
+                </li>
+              </ul>
+              <ul>
+                <li><strong>Hyundai social media</strong></li>
+                <li>Worldwide</li>
+                <div class="socialMedia">
+                  <li>
+                    <img
+                      width="21"
+                      height="21"
+                      src="images/section4_images/facebook.png"
+                      alt="Facebook"
+                    />
+                    <img
+                      width="21"
+                      height="21"
+                      src="images/section4_images/instagram.png"
+                      alt="Instagram"
+                    />
+                    <img
+                      width="21"
+                      height="21"
+                      src="images/section4_images/youtube.png"
+                      alt="Youtube"
+                    />
+                    <img
+                      width="21"
+                      height="21"
+                      src="images/section4_images/twitter.png"
+                      alt="Twitter"
+                    />
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
   <script src="page1.js"></script>
 </html>
