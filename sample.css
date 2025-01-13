@@ -1,0 +1,27 @@
+.section3Container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.section3ImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section3ImageContainer img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+.section3ImageContainer img:hover {
+  transform: scale(1.1);
+}
+.section3Caption {
+  text-decoration: none;
+  cursor: pointer;
+}
+.section3Caption:hover {
+  text-decoration: underline;
+}

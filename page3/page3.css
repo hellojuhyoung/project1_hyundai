@@ -1,0 +1,338 @@
+body {
+  margin: 0; /* Remove default browser margins */
+}
+/* page to the top button */
+#scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: beige;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+.container {
+  position: relative;
+  min-height: 50vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.section1 {
+  position: relative;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 81px;
+  min-height: 80px;
+  background-color: none; /* Initial background color */
+  z-index: 1; /* Ensure it stays on top */
+  transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+}
+.scrolled {
+  background-color: white;
+}
+.scrolled .logoWrap {
+  filter: invert(1);
+}
+.scrolled .menuWrap a {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap .language {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+/* scrolled navbar hovered */
+.scrolled .menuWrap a:hover {
+  opacity: 1;
+}
+.scrolled .optionsWrap .language:hover {
+  opacity: 1.5;
+}
+.scrolled .optionsWrap img:hover {
+  opacity: 1.5;
+}
+.navBarContainer {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.navbar li {
+  margin: 0 10px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+.logoWrap {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.menuWrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.menuWarp li {
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+}
+.optionsWrap {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  font-size: 12px;
+}
+.hyundaiLogo img {
+  width: 155px;
+  height: 22px;
+}
+.language {
+  display: inline-block;
+  line-height: 24px;
+}
+.globe img,
+.magnifyingGlass img {
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  color: white;
+  opacity: 1.5;
+}
+.section1BackgroundImageContainer {
+  position: relative;
+}
+.section1BackgroundImage {
+  display: flex;
+  justify-content: center;
+}
+/* section2 */
+.section2Container {
+  margin: 0px 100px;
+}
+.title1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title1 h3 {
+  font-size: 18px;
+  color: #002c5f;
+  margin-top: 100px;
+}
+.title1 h1 {
+  font-size: 70px;
+  font-weight: bolder;
+  margin: 0;
+}
+.title1 p {
+  margin: 30px 0px 0px;
+  font-size: 20px;
+  color: #434343;
+}
+.content1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content1 h2 {
+  margin: 0;
+  font-size: 29px;
+}
+.content1 p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.content1 img {
+  width: 70%;
+}
+.section3Container {
+  background-color: #002c5f;
+  color: white;
+  margin: 100px 0px 0px;
+  padding: 20px 0px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title2 {
+  margin: 100px;
+}
+.title2 h3 {
+  font-size: 36px;
+}
+.title2 h1 {
+  font-size: 72px;
+  font-weight: bolder;
+}
+.content2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+  align-items: flex-start;
+}
+.content2LeftContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.content2LeftContainer div {
+  font-size: 28px;
+}
+.content2Right p {
+  font-size: 17px;
+  line-height: 2;
+}
+.section4Container {
+  margin: 100px 100px;
+}
+.section4Container img {
+  width: 100%;
+}
+.section5Container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: flex-end;
+}
+.section5Left h2 {
+  font-size: 29px;
+  font-weight: bolder;
+}
+.section5Left p {
+  font-size: 17px;
+  line-height: 2;
+}
+.section6Container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #002c5f;
+  color: white;
+  margin: 100px 0px 0px;
+  padding: 100px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section6Content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section6Content h2 {
+  font-size: 28px;
+  line-height: 2;
+}
+.section6Content span {
+  font-size: 15px;
+  margin: 20px 0px;
+}
+.section7Container img {
+  display: flex;
+  justify-content: center;
+}
+/* section8 */
+.section8 {
+  position: relative;
+}
+.section8Container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  min-height: 30vh;
+  background-color: black;
+}
+.section8ListContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  padding: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+.section8ListContainer li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  flex-direction: column;
+  list-style: none;
+}
+.section8ListContainer ul li {
+  display: flex;
+  margin: 10px 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section8ListContainer ul li:first-child {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below the header */
+  color: white;
+}
+.section8ListContainer ul li:not(:first-child) {
+  font-size: 0.8em; /* Reduce font size of list items */
+  font-weight: 100; /* Make list items thinner */
+  font-family: "Lato", sans-serif;
+  color: #cfc8c2;
+}
+.section8ListContainer ul li:not(:first-child):hover {
+  color: white;
+  cursor: pointer;
+}
+.section8ListContainer ul:nth-child(4) li:nth-child(2):hover {
+  color: #cfc8c2;
+  cursor: default;
+}
+.section8Openinnew {
+  width: 1em;
+  height: 1em;
+  margin-left: 5px;
+}
+.socialMedia img {
+  margin-right: 15px;
+  opacity: 0.7;
+}
+.socialMedia img:hover {
+  color: white;
+  opacity: 1.2;
+  cursor: pointer;
+}
+.copyrights {
+  color: #cfc8c2;
+  background: black;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+.copyrights img {
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+}
