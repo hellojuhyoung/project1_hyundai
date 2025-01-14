@@ -48,34 +48,6 @@ section {
   align-items: center;
   padding: 10px 20px;
 }
-.scrolled {
-  background-color: white;
-}
-.scrolled .logoWrap {
-  filter: invert(1);
-}
-.scrolled .menuWrap a {
-  filter: invert(1);
-  opacity: 0.5;
-}
-.scrolled .optionsWrap .language {
-  filter: invert(1);
-  opacity: 0.5;
-}
-.scrolled .optionsWrap img {
-  filter: invert(1);
-  opacity: 0.5;
-}
-/* scrolled navbar hovered */
-.scrolled .menuWrap a:hover {
-  opacity: 1;
-}
-.scrolled .optionsWrap .language:hover {
-  opacity: 1.5;
-}
-.scrolled .optionsWrap img:hover {
-  opacity: 1.5;
-}
 .navBarContainer {
   list-style: none;
   padding: 0;
@@ -126,6 +98,35 @@ section {
   width: 24px;
   height: 24px;
   color: white;
+  opacity: 1.5;
+}
+/* scrolled function declared in javascript */
+.scrolled {
+  background-color: white;
+}
+.scrolled .logoWrap {
+  filter: invert(1);
+}
+.scrolled .menuWrap a {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap .language {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.scrolled .optionsWrap img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+/* scrolled navbar hovered */
+.scrolled .menuWrap a:hover {
+  opacity: 1;
+}
+.scrolled .optionsWrap .language:hover {
+  opacity: 1.5;
+}
+.scrolled .optionsWrap img:hover {
   opacity: 1.5;
 }
 .videoContainer {

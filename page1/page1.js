@@ -29,7 +29,7 @@ let currentVideoIndex = 0;
 function playNextVideo() {
   videos[currentVideoIndex].style.display = "none";
   textOverlays[currentVideoIndex].style.display = "none";
-  currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+  currentVideoIndex = (currentVideoIndex + 1) % videos.length; // sets new currentVideoIndex value
   videos[currentVideoIndex].style.display = "block";
   textOverlays[currentVideoIndex].style.display = "block";
   videos[currentVideoIndex].play();
@@ -37,7 +37,7 @@ function playNextVideo() {
 function prevVideo() {
   videos[currentVideoIndex].style.display = "none";
   textOverlays[currentVideoIndex].style.display = "none";
-  currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+  currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length; // sets new currentVideoIndex value
   videos[currentVideoIndex].style.display = "block";
   textOverlays[currentVideoIndex].style.display = "block";
   videos[currentVideoIndex].play();

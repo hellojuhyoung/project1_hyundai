@@ -35,6 +35,11 @@ const scrollPosition = window.scrollY;
 //     behavior: "smooth",
 //   });
 // });
+// pop-up alert message as the caption of an image is clicked
+function showCaptionAlert(captionText) {
+  captionText = "In progress";
+  alert(captionText);
+}
 
 //create section3Cars table
 const section3ImageData = [
@@ -105,6 +110,13 @@ const createSection3Table = () => {
 };
 
 createSection3Table();
+
+// event listener to the caption
+document.querySelectorAll(".section3Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
 
 //create section4Cars table
 const section4ImageData = [
@@ -207,6 +219,12 @@ const createSection4Table = () => {
 
 createSection4Table();
 
+document.querySelectorAll(".section4Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
+
 //create section5 table
 const section5ImageData = [
   {
@@ -278,6 +296,12 @@ const createSection5Table = () => {
 
 createSection5Table();
 
+document.querySelectorAll(".section5Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
+
 //create section6 table
 const section6ImageData = [
   {
@@ -348,6 +372,12 @@ const createSection6Table = () => {
 };
 
 createSection6Table();
+
+document.querySelectorAll(".section6Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
 
 //create section7 table
 const section7ImageData = [
@@ -439,6 +469,12 @@ const createsection7Table = () => {
 
 createsection7Table();
 
+document.querySelectorAll(".section7Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
+
 //create section8 table
 const section8ImageData = [
   {
@@ -509,6 +545,12 @@ const createsection8Table = () => {
 
 createsection8Table();
 
+document.querySelectorAll(".section8Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
+
 //create section9 table
 const section9ImageData = [
   {
@@ -568,3 +610,9 @@ const createsection9Table = () => {
 };
 
 createsection9Table();
+
+document.querySelectorAll(".section9Caption").forEach((caption) => {
+  caption.addEventListener("click", () => {
+    showCaptionAlert(caption.textContent);
+  });
+});
