@@ -18,23 +18,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const scrollToTopButton = document.getElementById("scrollToTopButton");
-const scrollPosition = window.scrollY;
-
-// window.addEventListener("scroll", () => {
-//   if (scrollPosition > 200) {
-//     scrollToTopButton.style.display = "block";
-//   } else {
-//     scrollToTopButton.style.display = "none";
-//   }
-// });
-
-// scrollToTopButton.addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth",
-//   });
-// });
 // pop-up alert message as the caption of an image is clicked
 function showCaptionAlert(captionText) {
   captionText = "In progress";

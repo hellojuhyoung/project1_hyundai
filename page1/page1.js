@@ -68,26 +68,3 @@ nextBtn.addEventListener("click", () => {
   videos[currentVideoIndex].pause(); // Pause current video
   playNextVideo();
 });
-
-const scrollToTopButton = document.getElementById("scrollToTopButton");
-// const targetSection = document.querySelector(".section4Top");
-const scrollPosition = window.scrollY;
-
-window.addEventListener("scroll", () => {
-  if (scrollPosition > 200) {
-    scrollToTopButton.style.display = "block";
-  } else {
-    scrollToTopButton.style.display = "none";
-  }
-
-  //   if (scrollPosition >= targetSection.offsetTop) {
-  //     scrollToTopButton.style.display = "none";
-  //   }
-});
-
-scrollToTopButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
