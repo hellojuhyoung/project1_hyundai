@@ -1,32 +1,26 @@
-/* @media (min-width: 1440px) {
+@media (min-width: 1920px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
   .container {
-    max-width: 960px;
+    max-width: 1920px;
     margin: 0 auto;
   }
-} */
+}
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    min-width: 768px;
+    margin: 0 auto;
+  }
+}
 body {
   margin: 0; /* Remove default browser margins */
 }
-/* page to the top button */
-#scrollToTopButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: beige;
-  color: black;
-  border: none;
-  border-radius: 50%;
-  padding: 10px 20px;
-  font-size: 24px;
-  font-weight: bolder;
-  cursor: pointer;
-  display: none;
-  z-index: 999;
-}
-/* #scrollToTopButton.top {
-  bottom: auto; 
-  top: 20px;
-} */
 section {
   position: relative;
   width: 100vw;
