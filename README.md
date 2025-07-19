@@ -37,14 +37,14 @@
 
 ## Overview
 
-This project is a **front-end recreation of key sections from the official Hyundai global website**. Built primarily with **HTML, CSS, and JavaScript**, it aims to showcase modern web development skills by replicating design, **responsiveness**, and interactive elements found on a major automotive brand's online presence.
+This project is a **front-end recreation of key sections from the official Hyundai global website**. Built primarily with **HTML, CSS, and JavaScript**, it aims to showcase modern web development skills by replicating design, **adaptability across devices**, and interactive elements found on a major automotive brand's online presence.
 
 **Why This Project?**
 
-This project demonstrates practical skills in building multi-page, **responsive** web interfaces and handling client-side interactivity. The core aspects highlighted include:
+This project demonstrates practical skills in building multi-page, **adaptive** web interfaces and handling client-side interactivity. The core aspects highlighted include:
 
 - **🌐 Multi-Page Navigation:** Implements a clear navigation structure across distinct sections like Home, Vehicles, and Company information.
-- **📱 Responsive Design:** Ensures optimal viewing and user experience across various devices and screen sizes, from mobile phones to desktop monitors.
+- **📱 Device Adaptability:** Ensures optimal viewing and user experience across various devices and screen sizes, from mobile phones to desktop monitors.
 - **✨ Interactive Elements:** Incorporates dynamic features such as video slideshows, navigation bar transformations on scroll, and image galleries to enhance user engagement.
 - **🎨 Brand Fidelity:** Focuses on meticulously recreating the visual design and user interface (UI) elements to closely match the original Hyundai website's aesthetic.
 - **✂️ Modular Structure:** Organizes code into logical, page-specific files (HTML, CSS, JS) for maintainability and scalability.
@@ -60,10 +60,44 @@ This project demonstrates practical skills in building multi-page, **responsive*
 | 📄  | **Documentation** | <ul><li>This `README.md` provides an overview, setup instructions, and a detailed file structure.</li><li>Code includes inline comments where complex logic or structure requires further explanation.</li></ul>                                                                                                                      |
 | 🔌  | **Integrations**  | <ul><li>Leverages standard web technologies (HTML, CSS, JavaScript) without external API integrations or complex backend systems.</li><li>Designed to run directly in any modern web browser.</li></ul>                                                                                                                               |
 | 🧩  | **Modularity**    | <ul><li>Each major section or page of the website (e.g., `page1`, `page2`, `page3`) resides in its own dedicated directory.</li><li>CSS and JavaScript files are linked specifically to their respective HTML pages, promoting reusable and isolated components.</li></ul>                                                            |
-| 🧪  | **Testing**       | <ul><li>Primarily relies on **manual browser testing** across different modern browsers (e.g., Chrome, Firefox, Safari).</li><li>Validation of **responsive layouts** and interactive elements on various screen sizes (desktop, tablet, mobile).</li></ul>                                                                           |
+| 🧪  | **Testing**       | <ul><li>Primarily relies on **manual browser testing** across different modern browsers (e.g., Chrome, Firefox, Safari).</li><li>Validation of **adaptive layouts** and interactive elements on various screen sizes (desktop, tablet, mobile).</li></ul>                                                                             |
 | ⚡️ | **Performance**   | <ul><li>Optimized for fast loading times due to its static nature.</li><li>Efficient use of CSS for styling and minimal JavaScript for dynamic elements.</li><li>No heavy server-side processing contributes to quick page rendering.</li></ul>                                                                                       |
 | 🛡️  | **Security**      | <ul><li>As a front-end static website, direct server-side vulnerabilities are not applicable.</li><li>Focuses on client-side security by avoiding insecure inline scripts and adhering to basic web security practices.</li><li>Does not handle sensitive user data or authentication.</li></ul>                                      |
 | 🚀  | **Scalability**   | <ul><li>Scalable by adding new HTML pages or sections, following the existing modular structure.</li><li>Can easily be hosted on static site hosting platforms (e.g., GitHub Pages, Netlify) to handle increased traffic efficiently.</li><li>Frontend architecture allows for future expansion into more complex features.</li></ul> |
+
+---
+
+## Visual Showcase
+
+Get a comprehensive look at the Hyundai Website Clone's design and functionality through these visual demonstrations.
+
+### Project Walkthrough
+
+A complete tour of the replicated Hyundai website, navigating through all three main pages to provide an overview of the project's scope and features.
+
+![Project Walkthrough GIF](assets/project-walkthrough.gif)
+
+### Page-Specific Demos
+
+Explore each individual page in detail, showcasing its unique layout, content, and interactive elements.
+
+#### Page 1: Home/Landing Page
+
+Experience the dynamic elements and design fidelity of the website's main landing page.
+
+![Page 1 Demo](assets/page1-demo.gif)
+
+#### Page 2: Vehicles Section
+
+A visual guide through the vehicles section, highlighting its structure and visual presentation.
+
+![Page 2 Demo](assets/page2-demo.gif)
+
+#### Page 3: Company Information
+
+Discover the layout and content of the dedicated company information page.
+
+![Page 3 Demo](assets/page3-demo.gif)
 
 ---
 
