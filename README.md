@@ -4,12 +4,13 @@
 
 # `Hyundai Website`
 
-<em>A responsive recreation of the Hyundai global website.</em>
+<em>A recreation of the Hyundai global website.</em>
 
 <em>Built with the tools and technologies:</em>
 
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=default&logo=JavaScript&logoColor=black" alt="JavaScript">
 <img src="https://img.shields.io/badge/CSS-663399.svg?style=default&logo=CSS&logoColor=white" alt="CSS">
+<img src="https://img.shields.io/badge/HTML-E34F26.svg?style=default&logo=html5&logoColor=white" alt="HTML">
 
 </div>
 <br>
